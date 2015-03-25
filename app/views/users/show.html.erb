@@ -1,1 +1,11 @@
-<%= @user.email %>
+<% provide :title, "User Profile" %>
+<div class="row">
+  <aside class="col-mid-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.email %>
+      </h1>
+    </section>
+  </aside>
+</div>
