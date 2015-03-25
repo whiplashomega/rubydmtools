@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ownedby: MyString
+  strength: 
+  dexterity: 
+  constitution: 
+  intelligence: 
+  wisdom: 
+  charisma: 
+  hp: 
+  hpmax: 
+
+two:
+  ownedby: MyString
+  strength: 
+  dexterity: 
+  constitution: 
+  intelligence: 
+  wisdom: 
+  charisma: 
+  hp: 
+  hpmax: 
