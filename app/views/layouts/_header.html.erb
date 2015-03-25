@@ -1,0 +1,13 @@
+  <header class="container-fluid">
+    <div class="navbar navbar-fixed-top navbar-inverse container-fluid">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Help", "#" %></li>
+          <li><%= link_to "Log in", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+    <%= link_to image_tag("swordshieldlogo.png", alt: "DM Tools Logo"), root_path, id: "logo" %>
+    <h1 class="text-left">Dungeon Master's Toolkit - <%= yield :title %></h1>
+  </header>
