@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "creator" => "application#creator"
   get "dashboard" => "application#dashboard"
   get 'signup' => 'users#new'
+  get 'users/:id' => 'users#show'
+  get 'users' => 'users#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
