@@ -1,0 +1,234 @@
+<div class="col-md-3" style="position:fixed;">
+  <select size="10">
+    <option>Character 1</option>
+    <option>Character 2</option>
+    <option>Monster 1</option>
+    <option>Monster 2</option>
+  </select>
+  <input type="button" class="btn btn-default" value="Add to Party" />
+  <input type="button" class="btn btn-default" value="Add to Encounter" />
+  <input type="button" class="btn btn-default" value="Add to Initiative" />
+  <div id="initiative">
+    <h3>Initiative</h3>
+    <table class="datatable table">
+      <thead>
+        <tr>
+          <th>Character Name</th><th>Bonus</th><th>Roll</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Character 1</td><td>1</td><td>19</td>
+        </tr>
+        <tr>
+          <td>Character 2</td><td>2</td><td>17</td>
+        </tr>
+        <tr>
+          <td>Monster 1</td><td>-1</td><td>8</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="col-md-9 pull-right">
+  <div class="row">
+    <h3>Party</h3>
+    <div class="col-md-3">
+      <h4>Character 1</h4>
+      <table class="table">
+        <tr>
+          <th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
+        </tr>
+        <tr>
+          <td>10</td><td>12</td><td>16</td><td>18</td><td>8</td><td>14</td>
+        </tr>
+        <tr>
+          <th colspan="6">Saves</th>
+        </tr>
+        <tr>
+          <td>0</td><td>1</td><td>3</td><td>7</td><td>-1</td><td>5</td>
+        </tr>
+        <tr>
+          <th>HP</th><td><input type="number" /></td><td>/ 39</td><th>Hitdice</th><td><input type="number" /></td><td>/ 5</td>
+        </tr>
+        <tr>
+          <th colspan="2">Inspiration</th><td><input type="number" /></td>
+          
+          <th colspan="2">Passive Perception</th><td>-1</td>
+        </tr>
+        <tr>
+          <th colspan="6">Skills (collapsable)</th>
+        </tr>
+        <tr>
+          <th colspan="2">Acrobatics</th><td>1</td><th colspan="2">Animal Handling</th><td>2</td>
+        </tr>
+        <tr>
+          <th colspan="2">Arcana</th><td>1</td><th colspan="2">Athletics</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Deception</th><td>1</td><th colspan="2">History</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Insight</th><td>1</td><th colspan="2">Intimidation</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Investigation</th><td>1</td><th colspan="2">Medicine</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Nature</th><td>1</td><th colspan="2">Perception</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Performance</th><td>1</td><th colspan="2">Persuasion</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Religion</th><td>1</td><th colspan="2">Slight of Hand</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Stealth</th><td>1</td><th colspan="2">Survival</th><td>2</td>
+        </tr>
+        <tr>
+          <th colspan="6">Attacks</th>
+        </tr>
+        <tr>
+          <td colspan="3">Attack Name</td><td>+1</td><td colspan="2">2d6+6</td>
+        </tr>
+        <tr><th colspan="6">Possessions (collapsable)</th></tr>
+        <tr><td colspan="6">Equipment and Treasure are listed here</td></tr>
+        <tr><th colspan="6">Proficiencies, Features, Traits (collapsable)</th></tr>
+        <tr><td colspan="6">Proficiencies, Features and Traits are listed here</td></tr>
+      </table>
+    </div>
+    <div class="col-md-3">
+      <h4>Character 2</h4>
+      <table class="table">
+        <tr>
+          <th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
+        </tr>
+        <tr>
+          <td>10</td><td>12</td><td>16</td><td>18</td><td>8</td><td>14</td>
+        </tr>
+        <tr>
+          <th colspan="6">Saves</th>
+        </tr>
+        <tr>
+          <td>0</td><td>1</td><td>3</td><td>7</td><td>-1</td><td>5</td>
+        </tr>
+        <tr>
+          <th>HP</th><td><input type="number" /></td><td>/ 39</td><th>Hitdice</th><td><input type="number" /></td><td>/ 5</td>
+        </tr>
+        <tr>
+          <th colspan="2">Inspiration</th><td><input type="number" /></td>
+          
+          <th colspan="2">Passive Perception</th><td>-1</td>
+        </tr>
+        <tr>
+          <th colspan="6">Skills (collapsable)</th>
+        </tr>
+        <tr>
+          <th colspan="2">Acrobatics</th><td>1</td><th colspan="2">Animal Handling</th><td>2</td>
+        </tr>
+        <tr>
+          <th colspan="2">Arcana</th><td>1</td><th colspan="2">Athletics</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Deception</th><td>1</td><th colspan="2">History</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Insight</th><td>1</td><th colspan="2">Intimidation</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Investigation</th><td>1</td><th colspan="2">Medicine</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Nature</th><td>1</td><th colspan="2">Perception</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Performance</th><td>1</td><th colspan="2">Persuasion</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Religion</th><td>1</td><th colspan="2">Slight of Hand</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Stealth</th><td>1</td><th colspan="2">Survival</th><td>2</td>
+        </tr>
+        <tr>
+          <th colspan="6">Attacks</th>
+        </tr>
+        <tr>
+          <td colspan="3">Attack Name</td><td>+1</td><td colspan="2">2d6+6</td>
+        </tr>
+        <tr><th colspan="6">Possessions (collapsable)</th></tr>
+        <tr><td colspan="6">Equipment and Treasure are listed here</td></tr>
+        <tr><th colspan="6">Proficiencies, Features, Traits (collapsable)</th></tr>
+        <tr><td colspan="6">Proficiencies, Features and Traits are listed here</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <h3>Encounter</h3>
+    <div class="col-md-3">
+      <h4>Monster 1</h4>
+      <table class="table">
+        <tr>
+          <th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
+        </tr>
+        <tr>
+          <td>10</td><td>12</td><td>16</td><td>18</td><td>8</td><td>14</td>
+        </tr>
+        <tr>
+          <th colspan="6">Saves</th>
+        </tr>
+        <tr>
+          <td>0</td><td>1</td><td>3</td><td>7</td><td>-1</td><td>5</td>
+        </tr>
+        <tr>
+          <th>HP</th><td><input type="number" /></td><td>/ 39</td><th>Hitdice</th><td><input type="number" /></td><td>/ 5</td>
+        </tr>
+        <tr>
+          <th colspan="2">Inspiration</th><td><input type="number" /></td>
+          
+          <th colspan="2">Passive Perception</th><td>-1</td>
+        </tr>
+        <tr>
+          <th colspan="6">Skills (collapsable)</th>
+        </tr>
+        <tr>
+          <th colspan="2">Acrobatics</th><td>1</td><th colspan="2">Animal Handling</th><td>2</td>
+        </tr>
+        <tr>
+          <th colspan="2">Arcana</th><td>1</td><th colspan="2">Athletics</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Deception</th><td>1</td><th colspan="2">History</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Insight</th><td>1</td><th colspan="2">Intimidation</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Investigation</th><td>1</td><th colspan="2">Medicine</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Nature</th><td>1</td><th colspan="2">Perception</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Performance</th><td>1</td><th colspan="2">Persuasion</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Religion</th><td>1</td><th colspan="2">Slight of Hand</th><td>2</td>
+        </tr> 
+        <tr>
+          <th colspan="2">Stealth</th><td>1</td><th colspan="2">Survival</th><td>2</td>
+        </tr>
+        <tr>
+          <th colspan="6">Attacks</th>
+        </tr>
+        <tr>
+          <td colspan="3">Attack Name</td><td>+1</td><td colspan="2">2d6+6</td>
+        </tr>
+        <tr><th colspan="6">Possessions (collapsable)</th></tr>
+        <tr><td colspan="6">Equipment and Treasure are listed here</td></tr>
+        <tr><th colspan="6">Proficiencies, Features, Traits (collapsable)</th></tr>
+        <tr><td colspan="6">Proficiencies, Features and Traits are listed here</td></tr>
+      </table>
+    </div>
+</div>
