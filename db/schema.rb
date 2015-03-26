@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(version: 20150325224321) do
 
   create_table "attacks", force: :cascade do |t|
-    t.string   "character"
     t.string   "name"
     t.integer  "bonus"
     t.string   "damage"
@@ -26,7 +25,6 @@ ActiveRecord::Schema.define(version: 20150325224321) do
   add_index "attacks", ["character_id"], name: "index_attacks_on_character_id"
 
   create_table "characters", force: :cascade do |t|
-    t.string   "ownedby"
     t.integer  "strength"
     t.integer  "dexterity"
     t.integer  "constitution"
@@ -66,7 +64,6 @@ ActiveRecord::Schema.define(version: 20150325224321) do
     t.string   "name"
     t.string   "classlevel"
     t.string   "background"
-    t.string   "playername"
     t.string   "race"
     t.string   "alignment"
     t.integer  "experiencepoints"
@@ -74,21 +71,9 @@ ActiveRecord::Schema.define(version: 20150325224321) do
     t.integer  "hitdice"
     t.integer  "hitdicemax"
     t.float    "carryweight"
-    t.integer  "copper"
-    t.integer  "silver"
-    t.integer  "gold"
-    t.integer  "platinum"
     t.text     "proficiencies"
     t.text     "equipment"
     t.text     "featurestraits"
-    t.text     "flaws"
-    t.text     "bonds"
-    t.text     "ideals"
-    t.text     "personalitytraits"
-    t.binary   "appearance"
-    t.text     "allies"
-    t.text     "backstory"
-    t.text     "treasure"
     t.integer  "user_id"
   end
 

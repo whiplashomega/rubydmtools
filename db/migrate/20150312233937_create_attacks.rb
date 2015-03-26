@@ -1,7 +1,6 @@
 class CreateAttacks < ActiveRecord::Migration
   def change
     create_table :attacks do |t|
-      t.string :character
       t.string :name
       t.integer :bonus
       t.string :damage
