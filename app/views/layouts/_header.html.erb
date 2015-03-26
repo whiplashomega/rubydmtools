@@ -3,13 +3,16 @@
       <nav>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home", root_path %></li>
-          <% if false %>
+          <% if logged_in? %>
           <li><%= link_to "Creator", creator_path %></li>
           <li><%= link_to "Dashboard", dashboard_path %></li>
-          <li><%= link_to "Sign Out", "#" %></li>
+          <li><%= link_to "Profile", current_user %></li>
+          <li><%= link_to "Users", '#' %></li>
+          <li><%= link_to "Settings", '#' %></li>
+          <li><%= link_to "Sign Out", logout_path, method: delete %></li>
           <% else %>
           <li><%= link_to "Sign Up", signup_path %></li>
-          <li><%= link_to "Sign In", "#" %></li>
+          <li><%= link_to "Log In", login_path %></li>
           <% end %>
         </ul>
       </nav>
