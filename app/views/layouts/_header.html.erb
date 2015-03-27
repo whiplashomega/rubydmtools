@@ -7,8 +7,8 @@
           <li><%= link_to "Creator", creator_path %></li>
           <li><%= link_to "Dashboard", dashboard_path %></li>
           <li><%= link_to "Profile", current_user %></li>
-          <li><%= link_to "Users", '#' %></li>
-          <li><%= link_to "Settings", '#' %></li>
+          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to "Settings", edit_user_path(current_user) %></li>
           <li><%= link_to "Sign Out", logout_path, method: "delete" %></li>
           <% else %>
           <li><%= link_to "Sign Up", signup_path %></li>

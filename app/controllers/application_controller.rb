@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   end
   
   def creator
+    @character = Character.new
   end
   
   def dashboard
