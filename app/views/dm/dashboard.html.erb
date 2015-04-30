@@ -1,5 +1,6 @@
 <% provide(:title, "DM Dashboard") %>
 <!--This is a static page layout for now-->
+<%= javascript_include_tag "encounterdashboard" "campaignjournal" %>
       <div id="templates" class="hidden">
         <div class="col-sm-4 character">
           <h4 class="name"></h4>
@@ -21,6 +22,9 @@
             </tr>
             <tr>
               <th>HP</th><td><input type="number" /> / </td><td class="hpmax"></td><th>Hitdice</th><td><input type="number" /> / </td><td class="hitdice"></td>
+            </tr>
+            <tr>
+              <th>AC:</th><td class="ac"></td><th>Speed</th><td class="speed"></td>
             </tr>
             <tr>
               <th colspan="2">Inspiration</th><td><input type="number" /></td>
