@@ -1,6 +1,10 @@
 <% provide(:title, "DM Dashboard") %>
 <!--This is a static page layout for now-->
-<%= javascript_include_tag "encounterdashboard" "campaignjournal" %>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="/js/encounterdashboard.js"></script>
+<script src="/js/campaignjournal.js"></script>
+<script src="/js/initiative.js"></script>
       <div id="templates" class="hidden">
         <div class="col-sm-4 character">
           <h4 class="name"></h4>
@@ -12,16 +16,16 @@
               <th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th>
             </tr>
             <tr>
-              <td class="str"></td><td class="dex"></td><td class="con"></td><td class="intel"></td><td class="wis"></td><td class="cha"></td>
+              <td class="strength"></td><td class="dexterity"></td><td class="constitution"></td><td class="intelligence"></td><td class="wisdom"></td><td class="charisma"></td>
             </tr>
             <tr>
               <th colspan="6">Saves</th>
             </tr>
             <tr>
-              <td class="strsave"></td><td class="dexsave"></td><td class="consave"></td><td class="intsave"></td><td class="wissave"></td><td class="chasave"></td>
+              <td class="strengthsave"></td><td class="dexteritysave"></td><td class="constitutionsave"></td><td class="intelligencesave"></td><td class="wisdomsave"></td><td class="charismasave"></td>
             </tr>
             <tr>
-              <th>HP</th><td><input type="number" /> / </td><td class="hpmax"></td><th>Hitdice</th><td><input type="number" /> / </td><td class="hitdice"></td>
+              <th>HP</th><td><input type="number" /> / </td><td class="hpmax"></td><th>Hitdice</th><td><input type="number" /> / </td><td class="hitdicemax"></td>
             </tr>
             <tr>
               <th>AC:</th><td class="ac"></td><th>Speed</th><td class="speed"></td>
@@ -71,11 +75,9 @@
             <h3 class="attacksheading">Attacks</h3>
             <div class="attacks"></div>
             <h3>Possessions </h3>
-            <div class="possessions"></div>
+            <div class="equipment"></div>
             <h3>Proficiencies, Features, Traits</h3>
-            <div class="features"></div>
-            <h3>Physical Description</h3>
-            <div class="physicaldescription"></div>
+            <div class="featurestraits"></div>
           </div>
           <input type="button" class="delete" value="Remove" />
         </div>
@@ -88,7 +90,7 @@
 <div class="col-md-3">
   <div class="row">
     <div class="col-sm-6">
-      <a href="{{ path('creator') }}">Creature Creator</a>
+      <a href="/creator">Creature Creator</a>
       <select size="10" id="charselect" class="form-control">
 
       </select>
@@ -117,14 +119,7 @@
       <input type="button" id="rollinit" value="roll initiative" />
   </div>
   <div id="journal" class="col-sm-12">
-    <script>
-      var userid = "{{ app.user.id }}"
-      var getallroute = "{{ path("get_journals", {'userid': app.user.id}) }}"
-      var addroute = "{{ path("add_journal", {'userid': app.user.id})}}"
-      var updateroute = "{{ path("update_journal", {'journalid': 1})}}"
-      var deleteroute = "{{ path("delete_journal", {'userid': app.user.id, 'journalid': 1})}}"
-      
-    </script>
+
     <br />
     <div id="createjournal">
       <label>Date</label> <select id="month">

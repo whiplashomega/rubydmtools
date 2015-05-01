@@ -1,13 +1,7 @@
 <% provide(:title, "Creature Creator") %>
 <!--This is a static page layout for now-->
-<%= javascript_include_tag "creator" %>
- <script type="text/javascript">
-  var loadallpath = " ";
-  var loadpath = " ";
-  var updatepath = " ";
-  var addpath = " ";
-  var deletepath = " ";
- </script>
+<script src="js/creator.js"></script>
+
 <div class="row">
   <div class="form-group col-md-3">
     <select id="charselect" class="form-control">
@@ -42,7 +36,7 @@
 </div>
 <div class="row">
   <div class="col-md-2 form-group">
-    <label>Experience: <input type="number" id="experience" class="form-control" /></label>
+    <label>Experience: <input type="number" id="experiencepoints" class="form-control" /></label>
   </div>
   
   <div class="col-md-2 form-group">
@@ -62,27 +56,27 @@
 <div class="row">
   <div class="col-md-4">
     <h4>Attributes</h4>
-    <label for="str">Strength: <input type="number" id="str" class="form-control" /></label>
-    <label for="dex">Dexterity: <input type="number" id="dex" class="form-control" /></label>
-    <label for="con">Constitution: <input type="number" id="con" class="form-control" /></label>
-    <label for="intel">Intelligence: <input type="number" id="intel" class="form-control" /></label>
-    <label for="wis">Wisdom: <input type="number" id="wis" class="form-control" /></label>
-    <label for="cha">Charisma: <input type="number" id="cha" class="form-control" /></label>
+    <label for="str">Strength: <input type="number" id="strength" class="form-control" /></label>
+    <label for="dex">Dexterity: <input type="number" id="dexterity" class="form-control" /></label>
+    <label for="con">Constitution: <input type="number" id="constitution" class="form-control" /></label>
+    <label for="intel">Intelligence: <input type="number" id="intelligence" class="form-control" /></label>
+    <label for="wis">Wisdom: <input type="number" id="wisdom" class="form-control" /></label>
+    <label for="cha">Charisma: <input type="number" id="charisma" class="form-control" /></label>
   </div>
   <div class="col-md-4">
     <h4>Abilities</h4>
     <label for="hpmax">Max HP: <input type="number" id="hpmax" class="form-control" /></label>
-    <label for="hitdice"> Max Hitdice: <input id="hitdice" type="number" class="form-control" /></label>
+    <label for="hitdice"> Max Hitdice: <input id="hitdicemax" type="number" class="form-control" /></label>
     <label>Passive Perception <input type="number" id="passiveperception" class="form-control" /></label>
   </div>
   <div class="col-md-4">
     <h4>Saves</h4>
-    <label>Strength: <input type="number" id="strsave" class="form-control" /></label>
-    <label>Dexterity: <input type="number" id="dexsave" class="form-control" /></label>
-    <label>Constitution: <input type="number" id="consave" class="form-control" /></label>
-    <label>Intelligence: <input type="number" id="intsave" class="form-control" /></label>
-    <label>Wisdom: <input type="number" id="wissave" class="form-control" /></label>
-    <label>Charisma: <input type="number" id="chasave" class="form-control" /></label>
+    <label>Strength: <input type="number" id="strengthsave" class="form-control" /></label>
+    <label>Dexterity: <input type="number" id="dexteritysave" class="form-control" /></label>
+    <label>Constitution: <input type="number" id="constitutionsave" class="form-control" /></label>
+    <label>Intelligence: <input type="number" id="intelligencesave" class="form-control" /></label>
+    <label>Wisdom: <input type="number" id="wisdomsave" class="form-control" /></label>
+    <label>Charisma: <input type="number" id="charismasave" class="form-control" /></label>
   </div>
 </div>
 <div class="row">
@@ -134,17 +128,12 @@
     </div>
   <div class="form-group">
   <h4>Possessions</h4>
-    <textarea id="possessions" class="form-control" rows="5"></textarea>
-  </div>
-
-  <div class="form-group">
-    <h4>Physical Description</h4>
-    <textarea class="form-control" id="physicaldescription" rows="5"></textarea>
+    <textarea id="equipment" class="form-control" rows="5"></textarea>
   </div>
 
   <div class="form-group">
     <h4>Proficiencies, Features and Traits</h4>
-    <textarea class="form-control" id="features" rows="5"></textarea>
+    <textarea class="form-control" id="featurestraits" rows="5"></textarea>
   </div>
   </div>
 </section>

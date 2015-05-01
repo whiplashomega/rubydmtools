@@ -2,7 +2,7 @@ var days = ["Godsday", "Elvesday", "Gnomesday", "Dragonsday", "Mansday", "Dwarve
 var months = ["Dorunor", "Trimalan", "Sylvanus", "Gaiana", "Maridia", "Moltyr", "Saris", "Tockra", "Amatherin"];
 
 function getJournals() {
-$.get(getallroute, function(journals) {
+$.get("/journal", function(journals) {
     var entries = $("#journalentries");
     entries.html(" ");
     journals.sort(sortdate);
@@ -11,14 +11,10 @@ $.get(getallroute, function(journals) {
       var deletebutton = $("<input type='button' value='Delete' />");
       deletebutton.attr("data-journal-id", journals[x].id);
       $(deletebutton).click(function() {
-        var thisdeleteroute = deleteroute.slice(0, -1) + $(this).attr("data-journal-id");
-        $.post(thisdeleteroute, function(t) {
-            if (t == "1") {
+        var thisdeleteroute = "/journal/" + $(this).attr("data-journal-id");
+        $.ajax({url: thisdeleteroute, type: "DELETE", success: function(t) {
               getJournals();
-            } else {
-              alert("Error: Could not Delete");
-            }
-          });
+          }});
       });
       entries.append(deletebutton);
       entries.append("<br /><hr />");
@@ -56,19 +52,19 @@ function sortdate(date1, date2) {
 }
 getJournals();
 
-$("#addjournal").click(function() {
+$(document).ready(function() {
+  $("#addjournal").click(function() {
   var month = $("#month").find(":selected").val();
   var day = $("#day").find(":selected").val();
   var year = $("#year").find(":selected").val();
   var date = month + " " + day + ", " + year;
   var text = $("#text").val();
-  $.post(addroute, {"date": date, "text": text }, function(t) {
-    if (t == "1") {
-      console.log("success");
+  $.ajax({url: "/journal", type: 'POST', contentType: 'application/json', data: JSON.stringify({"date": date, "text": text }), success: function(t) {
       getJournals();
     }
-  }, "text");
+  });
 });
+  });
 
 
 

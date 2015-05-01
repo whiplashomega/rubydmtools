@@ -1,15 +1,23 @@
 class AttackController < ApplicationController
   
-  def createattack
+  def create
+    @attack = current_user.characters.find(params[:attack][:character_id]).attacks.create
+    render :json => @attack
   end
   
-  def editattack
+  def update
+    @attack = current_user.characters.find(params[:attack][:character_id]).attacks.find(params[:attack][:id])
+    @attack.update_attributes(attack_params)
+    render :json => @attack
   end
   
-  def deleteattack
+  def index
+    @attacks = current_user.characters.find(params[:character_id]).attacks
+    render :json => @attacks
   end
+  private
   
-  def showattack
+  def attack_params
+    params.require(:attack).permit!    
   end
-  
 end

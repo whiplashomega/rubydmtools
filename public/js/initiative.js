@@ -19,9 +19,7 @@
       $(chartbody).append(newrow);
     };
     
-    $("#addCharButton").click(function() {
-      addrow();
-    });
+
     var sort_rows = function(a, b) {
       var val1 = Number($(a).find(".charroll").html());
       var val2 = Number($(b).find(".charroll").html());
@@ -41,6 +39,8 @@
         }
       }
     }
+    $(document).ready(function() {
+      
     $("#rollinit").click(function() {
       $(".characterinit").each(function() {
           var score = Number($(this).find(".charinit").val());
@@ -52,4 +52,8 @@
       for(var i = 0; i < list.length; i++) {
         list[i].parentNode.appendChild(list[i]);
       }
+    });
+    $("#addCharButton").click(function() {
+      addrow();
+    });      
     });

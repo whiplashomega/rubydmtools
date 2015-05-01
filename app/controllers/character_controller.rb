@@ -1,25 +1,39 @@
 class CharacterController < ApplicationController
   
-  def createchar
-    @character = Character.new(params(:character))
+  def create
+    @character = current_user.characters.new(params[:character])
     if @character.save
-      flash[:success] = "The character was saved successfully."
-      redirect_to creator_path
+      render :json => @character
     else
-      render 'application#creator'
+      render :json => @character
     end
   end
   
-  def editchar
+  def update
+    @character = current_user.characters.find(params[:id])
+    puts params[:character].inspect
+    if @character.update_attributes(charparams)
+      render :json => @character
+    else
+
+    end
   end
   
-  def deletechar
+  def destroy
+    current_user.characters.find(params[:id]).destroy
+    head :no_content
   end
   
-  def showchar
+  def show
+    render :json => current_user.characters.find(params[:id])
   end
   
-  def charindex
+  def index
+    @characters = current_user.characters.all
+    render :json => @characters
   end
-  
+  private 
+    def charparams
+      params.require(:character).permit!
+    end
 end
