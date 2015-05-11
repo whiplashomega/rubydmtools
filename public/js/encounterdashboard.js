@@ -17,15 +17,19 @@ function buildchar(character, location) {
   chardiv.find(".animalhandling").text(character.animalhandling);
   chardiv.find(".arcana").text(character.arcana);
   chardiv.find(".athletics").text(character.athletics);
-  var attacks = character.attacks;
-  for (x in attacks) {
-    var attackrow = $("#templates .attack").clone();
-    attackrow.find(".attackname").text(attacks[x].name);
-    attackrow.find(".bonus").text(attacks[x].bonus);
-    attackrow.find(".damage").text(attacks[x].damage);
-    chardiv.find(".attacks").append(attackrow);
-  }
+
+  $.get("/attack", {"character_id": character.id}, function(attacks) {
+    for(var x in attacks) {
+      var attackrow = $("#templates .attack").clone();
+      attackrow.find(".attackname").text(attacks[x].name);
+      attackrow.find(".bonus").text(attacks[x].bonus);
+      attackrow.find(".damage").text(attacks[x].damage);
+      chardiv.find(".attacks").append(attackrow);     
+    }
+  });
   chardiv.find(".background").text(character.background);
+  chardiv.find(".ac").text(character.ac);
+  chardiv.find(".speed").text(character.speed);
   chardiv.find(".charisma").text(character.charisma);
   chardiv.find(".charismasave").text(character.charismasave);
   chardiv.find(".classlevel").text(character.classlevel);
