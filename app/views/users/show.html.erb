@@ -1,4 +1,4 @@
-<% provide :title, "User Profile" + @user.name %>
+<% provide :title, "User Profile for " + @user.name %>
 <div class="row">
   <aside class="col-mid-4">
     <section class="user_info">
@@ -6,8 +6,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      
       <p>
-        email: @user.email
+        email: <%= @user.email %>
       </p>
         
     </section>
