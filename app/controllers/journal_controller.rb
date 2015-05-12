@@ -1,5 +1,5 @@
 class JournalController < ApplicationController
-  
+  before_action :user_logged_in  
   
   def create
    @journal = current_user.journals.new(journal_params)

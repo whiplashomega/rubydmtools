@@ -1,4 +1,5 @@
 class CharacterController < ApplicationController
+  before_action :user_logged_in
   
   def create
     @character = current_user.characters.new(params[:character])

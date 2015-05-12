@@ -1,4 +1,5 @@
 class AttackController < ApplicationController
+  before_action :user_logged_in
   
   def create
     @attack = current_user.characters.find(params[:attack][:character_id]).attacks.create
