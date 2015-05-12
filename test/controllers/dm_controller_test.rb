@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class DmControllerTest < ActionController::TestCase
-  test "should get creator" do
+  test "get creator without login causes redirect" do
     get :creator
-    assert_response :success
+    assert_response :redirect
   end
-  test "should get dashboard" do
+  test "get dashboard without login causes redirect" do
     get :dashboard
-    assert_response :success
+    assert_response :redirect
   end
 end
