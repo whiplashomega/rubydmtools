@@ -24,6 +24,11 @@ $light-gray: #777;
 
 body {
   padding-top: 60px;
+  font-size: 0.9em;
+}
+
+.navbar {
+  font-size: 1.25em;
 }
 
 section {
@@ -47,10 +52,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-
+h5 {
+  font-size: 1em;
+}
 
 p {
-  font-size: 1.1em;
   line-height: 1.7em;
 }
 
