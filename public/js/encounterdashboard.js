@@ -39,7 +39,7 @@ function buildchar(character, location) {
   chardiv.find(".deception").text(character.deception);
   chardiv.find(".dexterity").text(character.dexterity);
   chardiv.find(".dexteritysave").text(character.dexteritysave);
-  chardiv.find(".experiencepoints").text(character.experiencepoints);
+  chardiv.find(".experience").text(character.experiencepoints);
   chardiv.find(".featurestraits").text(character.featurestraits);
   chardiv.find(".history").text(character.history);
   chardiv.find(".hitdicemax").text(character.hitdicemax);
@@ -69,7 +69,8 @@ function buildchar(character, location) {
   chardiv.find(".wisdomsave").text(character.wisdomsave);
   chardiv.find(".accordion").accordion({
       heightStyle: "content",
-      collapsible: true
+      collapsible: true,
+      active: false
     });
   //Append
   chardiv.find(".delete").click(function() {
